@@ -14,7 +14,7 @@ Queue.prototype.dequeue = function(){
     var dequeued = this.storage[1];
     delete this.storage[1]; 
 
-    for(var i = 0; i < this.count; i++){ 
+    for(var i = 1; i <= this.count; i++){
       this.storage[i] = this.storage[i+1];
     }
     

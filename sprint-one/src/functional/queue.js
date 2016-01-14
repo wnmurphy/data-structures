@@ -8,7 +8,7 @@ var Queue = function(){
   // Implement the methods below
   someInstance.enqueue = function(value){
     count++;
-    storage[count] = value
+    storage[count] = value;
   };
 
   someInstance.dequeue = function(){  
@@ -18,8 +18,7 @@ var Queue = function(){
     delete storage[1]; 
 
     // shift every property
-
-    for(var i = 0; i < count; i++){ // 2b, 3c, 4d, 5e
+    for(var i = 1; i <= count; i++){
       storage[i] = storage[i+1];
     }
     
