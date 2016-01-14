@@ -27,12 +27,8 @@ stackMethods.size = function(){
 
 var stackInstance = Stack();
 
-console.log(stackInstance)
-
 function extend(to, from){
   for(var key in from){
     to[key] = from[key];
   }
 };
-
-stackInstance.push('a')
