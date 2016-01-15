@@ -18,11 +18,8 @@ var LinkedList = function(){
       this.tail = this.head;
 
     } else {
-      // {value: 4, next: null}
       this.head.next = newNode;
-      // {value: 4, next: {value: 5, next: null}}
       this.tail = newNode;
-      // {value: 4, next: null}
     }
   }; 
 
