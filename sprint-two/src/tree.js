@@ -14,6 +14,8 @@ treeMethods.addChild = function(value){
     value: value,
     children : []
   }
+  extend(child, treeMethods);
+  // if value 
   this.children.push(child);
 };
 
@@ -23,8 +25,9 @@ treeMethods.contains = function(target){
   for(var i = 0; i < this.children.length; i++){
     if(this.children[i].value === target){
       result = true;
-    } else if(this.children[i].children.length){
-      this.contains.call(this.children[i].children, target);
+    }
+    if((this.children[i].children.length) && (result !== true)){
+      result = this.children[i].contains(target);
     }
   }
   return result;
