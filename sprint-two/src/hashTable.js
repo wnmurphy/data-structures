@@ -27,7 +27,7 @@ HashTable.prototype.retrieve = function(k){
   }
   if(result === undefined){
     return null;
-  }else{
+  }else{ 
     return result;
   }
 };
