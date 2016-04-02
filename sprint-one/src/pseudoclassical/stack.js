@@ -3,20 +3,20 @@ var Stack = function() {
   this.count = 0;
 };
 
-Stack.prototype.push = function(value){
+Stack.prototype.push = function (value) {
   this.count++;
   this.storage[this.count] = value;
 };
 
-Stack.prototype.pop = function(){
+Stack.prototype.pop = function () {
   var popped = this.storage[this.count];
-  if(this.count){
+  if (this.count) {
     this.count--;
   }
   return popped;
 };
 
-Stack.prototype.size = function(){
+Stack.prototype.size = function () {
   return this.count;
 };
 

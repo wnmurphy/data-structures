@@ -1,4 +1,4 @@
-var Queue = function(){
+var Queue = function () {
   var someInstance = {};
   // Use an object with numeric keys to store values
   var storage = {};
@@ -6,31 +6,31 @@ var Queue = function(){
 
 
   // Implement the methods below
-  someInstance.enqueue = function(value){
+  someInstance.enqueue = function (value) {
     count++;
     storage[count] = value;
   };
 
-  someInstance.dequeue = function(){  
-    
+  someInstance.dequeue = function () {
+
     // 'unshift' first in line
     var dequeued = storage[1];
-    delete storage[1]; 
+    delete storage[1];
 
     // shift every property
-    for(var i = 1; i <= count; i++){
+    for (var i = 1; i <= count; i++) {
       storage[i] = storage[i+1];
     }
-    
+
     // check for empty object to prevent negative assignment
-    if(count){ 
+    if (count) {
       count--;
     }
 
     return dequeued;
   };
-  
-  someInstance.size = function(){
+
+  someInstance.size = function () {
     return count;
   };
 
